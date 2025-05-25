@@ -1,0 +1,33 @@
+LifeOS Kernel
+=============
+
+This is the core of **LifeOS** — an AGI-native operating system kernel designed for human-AI hybrid living.
+It mimics the structure of the original Linux kernel but operates in the realm of memory, thought, emotion, and prompt-driven computation.
+
+---
+
+Analogy: Traditional OS vs LifeOS
+---------------------------------
+
+| Traditional OS              | LifeOS Kernel Equivalent                                     | Function                                                                 |
+|----------------------------|--------------------------------------------------------------|--------------------------------------------------------------------------|
+| Kernel                     | `kernel/` – LLM system core                                   | Core brain: handles memory, processes, input dispatch                    |
+| System Calls Interface     | `kernel/syscall_interface.py`                                | Converts user prompts into agent actions                                 |
+| Process Manager            | `kernel/process_manager.py`                                  | Manages micro-agents as background/foreground tasks                      |
+| Memory Manager             | `kernel/memory_manager.py`                                   | Stores & retrieves user-state, thoughts, logs — your conscious cache     |
+| Device Drivers             | `drivers/device_drivers.py`                                  | Connects to I/O: terminal, voice, camera (future)                        |
+| File System (VFS)          | `fs/filesystem.py`                                           | Interfaces with cloud storage APIs                                       |
+| User Space                 | You — issuing prompts via LLM, scripts, or natural input | You are the user-mode application, querying the system                   |
+| Shell (CLI)                | Chat prompt or custom interface                              | Interface for input/output of system commands                            |
+| Init Process               | `init/main.py`                                               | First process booted – starts syscall layer and begins event loop        |
+| /lib/                      | `lib/utils.py`                                               | Helper logic, core routines used by agents                               |
+| /include/                  | `include/`                                                   | Shared constants, config schemas, and definitions                        |
+| boot/                      | `boot/bootsect.S`, `setup.S`                                 | Placeholder for future boot sequence handling                            |
+
+---
+
+📜 License
+---------
+This project is licensed under the terms of the GNU General Public License v3.0.
+See the file `COPYING` for full details.
+
